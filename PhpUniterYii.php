@@ -11,12 +11,6 @@ class PhpUniterYii extends Controller
 {
 
     public array $config;
-    public $defaultAction = 'list';
-
-    public function actionList()
-    {
-        var_export($this->config);
-    }
 
     public function actionRegister($email, $password)
     {
