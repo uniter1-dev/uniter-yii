@@ -6,7 +6,7 @@ composer require php-uniter/php-uniter-yii
 'controllerMap' => [
 ...
     'php-uniter' => [
-        'class' => 'app\commands\uniter\PhpUniterYii',
+        'class' => 'vendor/php-uniter/php-uniter-yii',
         'config' => [
             'accessToken'         => 'yours token after registration',
             'baseNamespace'       => 'Tests\Unit',
