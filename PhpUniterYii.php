@@ -14,6 +14,7 @@ class PhpUniterYii extends Controller
 
     public function actionRegister($email, $password)
     {
+        $this->mergeConfig();
         $registerService = RequesterFactory::registerServiceFactory($this->config);
         $phpUnitService = RequesterFactory::generateServiceFactory($this->config);
         $preprocessor = new Preprocessor($this->config['preprocess']);
@@ -34,6 +35,7 @@ class PhpUniterYii extends Controller
 
     public function actionGenerate($filePath)
     {
+        $this->mergeConfig();
         $registerService = RequesterFactory::registerServiceFactory($this->config);
         $phpUnitService = RequesterFactory::generateServiceFactory($this->config);
         $preprocessor = new Preprocessor($this->config['preprocess']);
@@ -51,4 +53,15 @@ class PhpUniterYii extends Controller
 
         return $code;
     }
+
+    public function mergeConfig()
+    {
+        $defaultConfig = require __DIR__.'/config.php';
+        foreach ($defaultConfig as $id => $value) {
+            if (empty($this->config[$id])) {
+                $this->config[$id] = $defaultConfig[$id];
+            }
+        }
+    }
+
 }
