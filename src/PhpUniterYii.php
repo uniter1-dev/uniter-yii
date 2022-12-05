@@ -1,6 +1,6 @@
 <?php
 
-namespace app\commands\uniter;
+namespace app\commands\uniter\src;
 
 use PhpUniter\PhpUniterRequester\Application\Obfuscator\Preprocessor;
 use PhpUniter\PhpUniterRequester\Requester;
@@ -56,7 +56,7 @@ class PhpUniterYii extends Controller
 
     public function mergeConfig()
     {
-        $defaultConfig = require __DIR__.'/config.php';
+        $defaultConfig = require __DIR__.'/../config.php';
         foreach ($defaultConfig as $id => $value) {
             if (empty($this->config[$id])) {
                 $this->config[$id] = $defaultConfig[$id];

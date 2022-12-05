@@ -10,7 +10,7 @@ composer require php-uniter/php-uniter-yii
 'controllerMap' => [
 ...
     'php-uniter' => [
-        'class' => 'vendor/php-uniter/php-uniter-yii',
+        'class' => 'vendor/php-uniter/src/php-uniter-yii',
         'config' => [
             'accessToken'         => 'yours token after registration',
             'basePath'            => dirname(__DIR__),
