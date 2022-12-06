@@ -1,8 +1,7 @@
 <?php
 
-namespace app\commands\uniter\src;
+namespace PhpUniter\PhpUniterYii;
 
-use PhpUniter\PhpUniterRequester\Application\Obfuscator\Preprocessor;
 use PhpUniter\PhpUniterRequester\Requester;
 use PhpUniter\PhpUniterRequester\RequesterFactory;
 use yii\console\Controller;
@@ -17,8 +16,7 @@ class PhpUniterYii extends Controller
         $this->mergeConfig();
         $registerService = RequesterFactory::registerServiceFactory($this->config);
         $phpUnitService = RequesterFactory::generateServiceFactory($this->config);
-        $preprocessor = new Preprocessor($this->config['preprocess']);
-        $requester = new Requester($registerService, $phpUnitService, $preprocessor, $this->config['projectDirectory']);
+        $requester = new Requester($registerService, $phpUnitService, $this->config['projectDirectory']);
         $code = $requester->register($email, $password);
 
         if (0 === $code) {
@@ -38,8 +36,8 @@ class PhpUniterYii extends Controller
         $this->mergeConfig();
         $registerService = RequesterFactory::registerServiceFactory($this->config);
         $phpUnitService = RequesterFactory::generateServiceFactory($this->config);
-        $preprocessor = new Preprocessor($this->config['preprocess']);
-        $requester = new Requester($registerService, $phpUnitService, $preprocessor, $this->config['projectDirectory']);
+
+        $requester = new Requester($registerService, $phpUnitService, $this->config['projectDirectory']);
         $code =  $requester->generate($filePath);
 
         $report = $requester->getReport();

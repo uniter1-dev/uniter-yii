@@ -6,7 +6,6 @@ return [
     'helperClass'         => 'PhpUniter\PhpUniterRequester\PhpUnitTestHelper',
     'generationPath'      => '/api/v1/generator/generate',
     'obfuscate'           => true,
-    'preprocess'          => true,
     'registrationPath'    => '/api/v1/registration/access-token',
     'unitTestBaseClass'   => 'PHPUnit\Framework\TestCase',
     'unitTestsDirectory'  => '/tests'
