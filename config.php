@@ -3,7 +3,7 @@
 return [
     'baseNamespace'       => 'uniter',
     'baseUrl'             => 'http://uniter1.loc',
-    'helperClass'         => 'PhpUniter\PhpUniterRequester\PhpUnitTestHelper',
+    'helperClass'         => 'Uniter1\UniterRequester\PhpUnitTestHelper',
     'generationPath'      => '/api/v1/generator/generate',
     'obfuscate'           => true,
     'registrationPath'    => '/api/v1/registration/access-token',

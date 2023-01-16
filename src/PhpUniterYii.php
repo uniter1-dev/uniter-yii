@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpUniter\PhpUniterYii;
+namespace Uniter1\UniterYii;
 
-use PhpUniter\PhpUniterRequester\Requester;
-use PhpUniter\PhpUniterRequester\RequesterFactory;
+use Uniter1\UniterRequester\Requester;
+use Uniter1\UniterRequester\RequesterFactory;
 use yii\console\Controller;
 
 class PhpUniterYii extends Controller

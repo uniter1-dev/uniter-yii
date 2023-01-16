@@ -1,11 +1,11 @@
 {
-    "name": "php-uniter/php-uniter-yii",
+    "name": "uniter1/uniter-yii",
     "description": "",
     "keywords": [
         "php-uniter",
         "php-uniter-yii"
     ],
-    "homepage": "https://github.com/php-uniter/php-uniter-yii.git",
+    "homepage": "https://github.com/uniter1-dev/uniter-yii.git",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.4|^8.0",
         "guzzlehttp/guzzle": "^7.0@dev",
-        "php-uniter/php-uniter-requester": "^1.1"
+        "uniter1/uniter-requester": "^1.1"
     },
     "require-dev": {
         "mockery/mockery": "^1.5",
@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PhpUniter\\PhpUniterYii\\": "src"
+            "Uniter1\\UniterYii\\": "src"
         }
     },
     "config": {
@@ -36,7 +36,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/php-uniter/php-uniter-assistant.git"
+            "url": "https://github.com/uniter1-dev/uniter-requester"
         }
     ],
     "minimum-stability": "dev",
