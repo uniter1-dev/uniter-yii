@@ -3,14 +3,14 @@ Yii2 commands for remote requests to Php-Uniter test generation service
 This package provides 2 commands: first for registration, second for test generation request.
 
 ## Short instruction
-composer require php-uniter/php-uniter-yii
+composer require uniter1/uniter-yii
 
 // edit config/console.php
 
 'controllerMap' => [
 ...
     'php-uniter' => [
-        'class' => 'app\commands\uniter\src\PhpUniterYii',
+        'class' => 'app\commands\uniter\src\Uniter1Yii',
         'config' => [
             'accessToken'         => your requested token,
             'basePath'            => dirname(__DIR__),
@@ -19,12 +19,12 @@ composer require php-uniter/php-uniter-yii
 ]
 
 // get registered token
-php yii php-uniter/register {email} {password}
+php yii uniter1/register {email} {password}
 
 read email and put token to config/console.php
 
 // generate test for your php class file
-php yii php-uniter/generate path/to/file
+php yii uniter1/generate path/to/file
 
 result should be written to yours unitTestsDirectory (see in config/console.php)
 
@@ -34,7 +34,7 @@ result should be written to yours unitTestsDirectory (see in config/console.php)
 You can install the package via composer:
 
 ```bash
-composer require php-uniter/php-uniter-yii
+composer require uniter1/uniter-yii
 ```
 ## Testing
 
@@ -42,7 +42,7 @@ composer require php-uniter/php-uniter-yii
 
 ### User registration:
 ```php
-php yii php-uniter/register {email} {password}
+php yii uniter1/register {email} {password}
 ```
 User will be registered, and access token will be sent to your email. You need to put that token to yours config/console.php file as 'accessToken'. After that you can send test generation queries.
 
@@ -71,7 +71,7 @@ Base directory to save generated test classes. Check that directory exists and i
 
 ### Test generation
 ```bash
-php yii php-uniter/generate {filePath}
+php yii uniter1/generate {filePath}
 ```
 Your class you want to test will be read from {filePath}, obfuscated if you did not turn obfuscation off, sent to our service. There will be created some phpunit test file to test different variants of yours class methods. The result will be deobfuscated and saved to 'unitTestsDirectory'- to some nested folder according to class namespace.
 

@@ -6,7 +6,7 @@ use Uniter1\UniterRequester\Requester;
 use Uniter1\UniterRequester\RequesterFactory;
 use yii\console\Controller;
 
-class PhpUniterYii extends Controller
+class Uniter1Yii extends Controller
 {
 
     public array $config;
@@ -20,7 +20,7 @@ class PhpUniterYii extends Controller
         $code = $requester->register($email, $password);
 
         if (0 === $code) {
-            $this->stdout('User registered. Access token in your email. Put it in .env file - PHP_UNITER_ACCESS_TOKEN'."\n");
+            $this->stdout('User registered. Access token in your email. Put it in .env file - UNITER1_ACCESS_TOKEN'."\n");
         }
 
         $report = $requester->getReport();
