@@ -1,4 +1,4 @@
-Yii2 commands for remote requests to Php-Uniter test generation service
+Yii2 commands for remote requests to Uniter1 test generation service
 
 This package provides 2 commands: first for registration, second for test generation request.
 
@@ -9,7 +9,7 @@ composer require uniter1/uniter-yii
 
 'controllerMap' => [
 ...
-    'php-uniter' => [
+    'uniter1' => [
         'class' => 'app\commands\uniter\src\Uniter1Yii',
         'config' => [
             'accessToken'         => your requested token,
