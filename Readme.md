@@ -10,7 +10,7 @@ composer require uniter1/uniter-yii
 'controllerMap' => [
 ...
     'uniter1' => [
-        'class' => 'app\commands\uniter\src\Uniter1Yii',
+    'class' => 'Uniter1\UniterYii\Uniter1Yii',
         'config' => [
             'accessToken'         => your requested token,
             'basePath'            => dirname(__DIR__),
