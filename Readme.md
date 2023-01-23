@@ -69,6 +69,9 @@ Base framework for yours test class.
 ```
 Base directory to save generated test classes. Check that directory exists and is writable.
 
+'inspectorMode'       => true,
+if true, private and protected methods will be tested. If false, none.
+
 ### Test generation
 ```bash
 php yii uniter1/generate {filePath}
