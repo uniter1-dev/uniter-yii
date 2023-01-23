@@ -8,5 +8,7 @@ return [
     'obfuscate'           => true,
     'registrationPath'    => '/api/v1/registration/access-token',
     'unitTestBaseClass'   => 'PHPUnit\Framework\TestCase',
-    'unitTestsDirectory'  => '/tests'
+    'unitTestsDirectory'  => '/tests',
+    'inspectorMode'       => true,
+    'useDependent'        => false
 ];
