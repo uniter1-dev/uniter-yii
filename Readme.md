@@ -68,8 +68,9 @@ Base framework for yours test class.
 'unitTestsDirectory' => tests/Unit
 ```
 Base directory to save generated test classes. Check that directory exists and is writable.
-
+```bash
 'inspectorMode'       => true,
+```
 if true, private and protected methods will be tested. If false, none.
 
 ### Test generation
