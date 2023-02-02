@@ -24,7 +24,7 @@ php yii uniter1/register {email} {password}
 read email and put token to config/console.php
 
 // generate test for your php class file
-php yii uniter1/generate path/to/file
+php yii uniter1/generate path/to/file [methodToOverwrite]
 
 result should be written to yours unitTestsDirectory (see in config/console.php)
 
@@ -75,10 +75,12 @@ if true, private and protected methods will be tested. If false, none.
 
 ### Test generation
 ```bash
-php yii uniter1/generate {filePath}
+php yii uniter1/generate {filePath} [methodToOverwrite]
 ```
 Your class you want to test will be read from {filePath}, obfuscated if you did not turn obfuscation off, sent to our service. There will be created some phpunit test file to test different variants of yours class methods. The result will be deobfuscated and saved to 'unitTestsDirectory'- to some nested folder according to class namespace.
 
 Open it, read it and use to test yours class.
 
 Generated class, possibly, will not be completed test - read comments before each generated test method.
+
+methodToOverwrite optional parameter allows you to replace only those methods that test one of the methods of the source class in the previously generated test class during generation. Be careful when using it - it is necessary that the previously generated test lies at the same address, and also that no changes are made to the class under test, except for the method that we specified with this option.

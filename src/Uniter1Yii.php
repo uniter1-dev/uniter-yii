@@ -31,14 +31,14 @@ class Uniter1Yii extends Controller
         return $code;
     }
 
-    public function actionGenerate($filePath)
+    public function actionGenerate($filePath, $overwriteOneMethod = '')
     {
         $this->mergeConfig();
         $registerService = RequesterFactory::registerServiceFactory($this->config);
         $phpUnitService = RequesterFactory::generateServiceFactory($this->config);
 
         $requester = new Requester($registerService, $phpUnitService, $this->config['projectDirectory']);
-        $code =  $requester->generate($filePath);
+        $code =  $requester->generate($filePath, $overwriteOneMethod);
 
         $report = $requester->getReport();
         foreach ($report->getErrors() as $message) {

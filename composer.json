@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.4|^8.0",
         "guzzlehttp/guzzle": "^7.0@dev",
-        "uniter1/uniter-requester": "^1.1"
+        "uniter1/uniter-requester": "*"
     },
     "require-dev": {
         "mockery/mockery": "^1.5",
