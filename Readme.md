@@ -75,7 +75,7 @@ if true, private and protected methods will be tested. If false, none.
 
 ### Test generation
 ```bash
-php yii uniter1/generate {filePath} [--overwriteOneMethod=methodToOverwrite]
+php yii uniter1/generate {filePath} [methodToOverwrite]
 ```
 Your class you want to test will be read from {filePath}, obfuscated if you did not turn obfuscation off, sent to our service. There will be created some phpunit test file to test different variants of yours class methods. The result will be deobfuscated and saved to 'unitTestsDirectory'- to some nested folder according to class namespace.
 
